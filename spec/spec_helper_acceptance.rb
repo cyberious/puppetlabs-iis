@@ -9,7 +9,7 @@ RSpec.configure do |c|
 end
 
 unless ENV['MODULE_provision'] == 'no'
-  puts "Install wsus_client module to agent #{default.node_name}"
+  puts "Install iis module to agent #{default.node_name}"
   result = on default, "echo #{default['distmoduledir']}"
   target = result.raw_output.chomp
   proj_root = File.expand_path(File.join(File.dirname(__FILE__), '..'))
